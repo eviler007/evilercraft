@@ -12,7 +12,7 @@ module.exports = {
       // 预渲染
       config.plugin('prerender-spa')
         .use(PrerenderSPAPlugin, [{
-          staticDir: path.join(__dirname, 'dist'),
+          staticDir: path.join(__dirname, './dist'),
           routes: [ '/', '/about' ]
         }]);
     }
