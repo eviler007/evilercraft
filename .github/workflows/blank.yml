@@ -3,11 +3,11 @@ name: CI
 on:
   push:
     branches:
-    - main
+    - master
 
 jobs:
   clone_job:
-    name: clone dist to ghpage
+    name: clone file to ghpage
     runs-on: ubuntu-18.04
     steps:
     - name: deploy
