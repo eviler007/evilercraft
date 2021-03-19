@@ -14,7 +14,7 @@ jobs:
 
     - name: Install Node.js
       uses: actions/setup-node@v2
-      width:
+      with:
         node-version: '12'
 
     - name: Pack
