@@ -1,6 +1,6 @@
 const http = require('http');
 const fs = require('fs');
-const httpPort = 443;
+const httpPort = 80;
 
 http.createServer((req, res) => {
   fs.readFile('index.html', 'utf-8', (err, content) => {
