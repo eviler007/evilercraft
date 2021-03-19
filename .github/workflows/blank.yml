@@ -11,10 +11,4 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - name: deploy
-      run: |
-        ls
-        cd ./dist
-
-        
-        
-        
+    - run: cd ./dist
