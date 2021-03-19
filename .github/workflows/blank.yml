@@ -12,6 +12,7 @@ jobs:
     steps:
     - name: deploy
       run: |
+        ls
         cd ./dist
 
         
