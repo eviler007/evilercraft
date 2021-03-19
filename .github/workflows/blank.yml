@@ -20,6 +20,7 @@ jobs:
     - name: Start-up Node Server
       run: | 
         yarn add connect-history-api-fallback
+        yarn add connect
         sudo node ./server/index.js &
 
     - name: Add CNAME File
