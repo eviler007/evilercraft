@@ -18,8 +18,9 @@ jobs:
         node-version: '12'
 
     - name: Pack
-      run: yarn install
-      run: npm run build
+      run: | 
+        yarn install
+        npm run build
 
     - name: Add CNAME
       run: | 
