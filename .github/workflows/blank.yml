@@ -11,9 +11,8 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - name: deploy
-      run: | 
+      run: |
         cd ./dist
-        echo "eviler.top" > CNAME
 
         
         
