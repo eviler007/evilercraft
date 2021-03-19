@@ -16,6 +16,8 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '12'
+    
+    - name: Start-up Node Server
       run: node ./server/index.js
 
     - name: Add CNAME File
