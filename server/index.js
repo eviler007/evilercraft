@@ -4,5 +4,5 @@ const path = require('path');
 
 const app = connect();
 app.use(history());
-
+console.log('path.join(__dirname + /dist)', path.join(__dirname + '/dist'));
 app.use(path.join(__dirname + '/dist'));
