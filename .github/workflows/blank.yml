@@ -9,8 +9,10 @@ jobs:
   main_job:
     runs-on: ubuntu-18.04
     steps:
-    - name: Checkout And Install Node.js
+    - name: Checkout
       uses: actions/checkout@v2.3.1
+
+    - name: Install Node.js
       uses: actions/setup-node@v2
       width:
         node-version: '12'
@@ -18,7 +20,7 @@ jobs:
     - name: Pack
       run: yarn install
       run: npm run build
-      
+
     - name: Add CNAME
       run: | 
         cd ./dist
