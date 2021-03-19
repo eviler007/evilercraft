@@ -14,9 +14,11 @@ jobs:
       uses: actions/setup-node@v2
       width:
         node-version: '12'
+
+    - name: Pack
       run: yarn install
       run: npm run build
-
+      
     - name: Add CNAME
       run: | 
         cd ./dist
