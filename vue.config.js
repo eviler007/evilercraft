@@ -1,5 +1,5 @@
-const path = require('path');
-const PrerenderSPAPlugin = require('prerender-spa-plugin');
+// const path = require('path');
+// const PrerenderSPAPlugin = require('prerender-spa-plugin');
 const WebpackBundleAnalyzer = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
@@ -10,11 +10,11 @@ module.exports = {
       config.plugin('bundle-analyzer')
         .use(WebpackBundleAnalyzer, []);
       // 预渲染
-      config.plugin('prerender-spa')
-        .use(PrerenderSPAPlugin, [{
-          staticDir: path.join(__dirname, './dist'),
-          routes: [ '/', '/about' ]
-        }]);
+      // config.plugin('prerender-spa')
+      //   .use(PrerenderSPAPlugin, [{
+      //     staticDir: path.join(__dirname, './dist'),
+      //     routes: [ '/', '/about' ]
+      //   }]);
     }
   }
 };
