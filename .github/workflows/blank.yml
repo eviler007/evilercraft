@@ -1,0 +1,18 @@
+name: CI
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  clone_job:
+    name: clone dist to ghpage
+    runs-on: ubuntu-18.04
+    steps:
+    - name: clone
+      run: |
+        git checkout ghpage
+        git checkout --patch master ./dist/**
+        git push origin ghpage
+      
