@@ -14,12 +14,7 @@ jobs:
       run: | 
         cd ./dist
         echo "eviler.top" > CNAME
-        git init
-        git config --global user.name "${U_NAME}"
-        git config --global user.email "${U_EMAL}"
-        git add .
-        git commit -m "Automatically update"
-        git push --quiet --force  "https://${GH_TOKEN}@${GH_REF}" master:${P_BRANCH}
+
         
         
         
