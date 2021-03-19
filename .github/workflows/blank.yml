@@ -18,7 +18,7 @@ jobs:
         node-version: '12'
     
     - name: Start-up Node Server
-      run: node ./server/index.js
+      run: sudo node ./server/index.js
 
     - name: Add CNAME File
       run: | 
