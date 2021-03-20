@@ -30,4 +30,4 @@ jobs:
     
     - name: Start-up Node Server
       run: | 
-        sudo node ./server/index.js
+        sudo node ./server/index.js &
