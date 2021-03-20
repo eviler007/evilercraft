@@ -1,5 +1,19 @@
-const history = require('connect-history-api-fallback');
-const express = require('express');
+// const history = require('connect-history-api-fallback');
+// const express = require('express');
 
-const app = express();
-app.use('/', history());
+// const app = express();
+// app.use('/', history());
+const http = require('http');
+const host = 'localhost';
+const port = '80';
+
+const app = http.createServer((req, res) => {
+  if (req.url === '/test') {
+    res.write('index');
+    res.end();
+  }
+});
+
+app.listen(80, () => {
+  console.log(`服务器运行在http://${host}:${port}`);
+});
