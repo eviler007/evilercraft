@@ -6,12 +6,14 @@ const router = createRouter({
   routes
 });
 
-// 为每个路由设置title
 router.afterEach((to, from, next) => {
+  // 为每个路由设置title
   if (to.meta.title) {
     document.title = to.meta.title;
   }
-  next();
+  if (next && typeof next === 'function') { // 防止切换到当前路由报错
+    next();
+  }
 });
 
 export default router;

@@ -5,6 +5,7 @@ const prerenderRoutes = require('./prerenderRoutes.js');
 
 module.exports = {
   publicPath: '/',
+  productionSourceMap: false,
   chainWebpack: config => {
     if (process.env.NODE_ENV === 'production') {
       // 包模块分析工具
