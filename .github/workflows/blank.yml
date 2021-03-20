@@ -22,12 +22,3 @@ jobs:
       with:
         branch: gh-pages
         folder: dist
-
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '12'
-    
-    - name: Start-up Node Server
-      run: | 
-        sudo node ./server/index.js &
