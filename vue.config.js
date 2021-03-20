@@ -1,6 +1,7 @@
 const path = require('path');
 const PrerenderSPAPlugin = require('prerender-spa-plugin');
 const WebpackBundleAnalyzer = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const prerenderRoutes = require('./prerenderRoutes.js');
 
 module.exports = {
   publicPath: '/',
@@ -13,7 +14,7 @@ module.exports = {
       config.plugin('prerender-spa')
         .use(PrerenderSPAPlugin, [{
           staticDir: path.join(__dirname, 'dist'),
-          routes: [ '/', '/about', '/about/child'],
+          routes: prerenderRoutes,
           postProcess (renderedRoute) {
             // Ignore any redirects.
             renderedRoute.route = renderedRoute.originalRoute;
