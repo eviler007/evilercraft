@@ -14,6 +14,6 @@ const app = http.createServer((req, res) => {
   }
 });
 
-app.listen(80, () => {
+app.listen(port, () => {
   console.log(`服务器运行在http://${host}:${port}`);
 });
