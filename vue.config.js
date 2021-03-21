@@ -5,7 +5,7 @@ const prerenderRoutes = require('./prerenderRoutes.js');
 const IS_PROD_ENV = process.env.NODE_ENV === 'production';
 
 module.exports = {
-  publicPath: './',
+  publicPath: '/',
   productionSourceMap: false,
   chainWebpack: config => {
     if (IS_PROD_ENV) {
