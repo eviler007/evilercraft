@@ -2,12 +2,13 @@ const path = require('path');
 const PrerenderSPAPlugin = require('prerender-spa-plugin');
 const WebpackBundleAnalyzer = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const prerenderRoutes = require('./prerenderRoutes.js');
+const IS_PROD_ENV = process.env.NODE_ENV === 'production';
 
 module.exports = {
-  publicPath: '/',
+  publicPath: './',
   productionSourceMap: false,
   chainWebpack: config => {
-    if (process.env.NODE_ENV === 'production') {
+    if (IS_PROD_ENV) {
       // 包模块分析工具
       config.plugin('bundle-analyzer')
         .use(WebpackBundleAnalyzer, []);
