@@ -1,6 +1,7 @@
 const path = require('path');
 const PrerenderSPAPlugin = require('prerender-spa-plugin');
 const WebpackBundleAnalyzer = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const FontminPlugin = require('fontmin-webpack');
 const prerenderRoutes = require('./prerenderRoutes.js');
 const IS_PROD_ENV = process.env.NODE_ENV === 'production';
 
@@ -8,6 +9,15 @@ module.exports = {
   publicPath: '/',
   productionSourceMap: false,
   chainWebpack: config => {
+    // 字体处理
+    config.plugin('fontmin')
+      .use(FontminPlugin, [{
+        autodetect: true,
+        glyphs: ['寒江孤影，江湖故人，相逢何必曾相識'].reduce((res, item) => {
+          res.push(...Array.from(item));
+          return res;
+        }, [])
+      }]);
     if (IS_PROD_ENV) {
       // 包模块分析工具
       config.plugin('bundle-analyzer')

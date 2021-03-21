@@ -1,6 +1,6 @@
 <template>
   <div class="w-100 h-100 bg">
-    <h1 class="font-taiwan">寒江過影，江湖古人，相逢何必曾相識</h1>
+    <h1 class="font-taiwan">寒江孤影，江湖故人，相逢何必曾相識</h1>
   </div>
 </template>
 
